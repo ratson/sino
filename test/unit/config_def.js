@@ -5,4 +5,3 @@ describe('config.yaml', function() {
     require('js-yaml').safeLoad(source)
   })
 })
-

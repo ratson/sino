@@ -52,4 +52,3 @@ describe('tag_version', function() {
     })
   })
 })
-

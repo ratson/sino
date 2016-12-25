@@ -14,4 +14,3 @@ describe('mystreams', function() {
     }, 10)
   })
 })
-

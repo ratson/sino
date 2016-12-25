@@ -1,4 +1,4 @@
-
+/* global Symbol */
 var assert = require('assert')
 var request = require('request')
 var Promise = require('bluebird')
@@ -103,4 +103,3 @@ extensions.send = function (data) {
 }
 
 module.exports = smart_request
-

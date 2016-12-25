@@ -155,4 +155,3 @@ Server.prototype.debug = function() {
 }
 
 module.exports = Server
-

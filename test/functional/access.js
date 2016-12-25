@@ -77,4 +77,3 @@ module.exports = function () {
     check_publish('test:badpass', 'test-only-auth', false)
   })
 }
-

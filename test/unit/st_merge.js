@@ -50,4 +50,3 @@ describe('Merge', function() {
     )
   })
 })
-

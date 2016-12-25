@@ -23,4 +23,3 @@ Plugin.prototype.authenticate = function(user, password, cb) {
   }
   return cb(null, [ user ])
 }
-

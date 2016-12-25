@@ -38,4 +38,3 @@ process.on('exit', function() {
   if (forks[0]) forks[0].kill()
   if (forks[1]) forks[1].kill()
 })
-

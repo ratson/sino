@@ -1,12 +1,14 @@
-`sinopia` - a private/caching npm repository server
+`sino` - a private/caching npm repository server
 
-[![npm version badge](https://img.shields.io/npm/v/sinopia.svg)](https://www.npmjs.org/package/sinopia)
-[![travis badge](http://img.shields.io/travis/rlidwka/sinopia.svg)](https://travis-ci.org/rlidwka/sinopia)
-[![downloads badge](http://img.shields.io/npm/dm/sinopia.svg)](https://www.npmjs.org/package/sinopia)
-
-It allows you to have a local npm registry with zero configuration. You don't have to install and replicate an entire CouchDB database. Sinopia keeps its own small database and, if a package doesn't exist there, it asks npmjs.org for it keeping only those packages you use.
+It allows you to have a local npm registry with zero configuration. You don't have to install and replicate an entire CouchDB database. Sino keeps its own small database and, if a package doesn't exist there, it asks npmjs.org for it keeping only those packages you use.
 
 <p align="center"><img src="https://f.cloud.github.com/assets/999113/1795553/680177b2-6a1d-11e3-82e1-02193aa4e32e.png"></p>
+
+## Why Fork
+
+This is a fork from [sinopia](https://www.npmjs.com/package/sinopia), which seems [no longer maintained](https://github.com/rlidwka/sinopia/issues/376).
+
+This fork fixes warnings when running on Node v7.
 
 ## Use cases
 
@@ -34,7 +36,7 @@ It allows you to have a local npm registry with zero configuration. You don't ha
 ```bash
 # installation and starting (application will create default
 # config in config.yaml you can edit later)
-$ npm install -g sinopia
+$ npm install -g sino
 $ sinopia
 
 # npm configuration
@@ -46,18 +48,6 @@ $ npm set ca null
 ```
 
 Now you can navigate to [http://localhost:4873/](http://localhost:4873/) where your local packages will be listed and can be searched.
-
-### Docker
-
-A Sinopia docker image [is available](https://registry.hub.docker.com/u/keyvanfatehi/sinopia/)
-
-### Chef
-
-A Sinopia Chef cookbook [is available at Opscode community](http://community.opscode.com/cookbooks/sinopia) source: https://github.com/BarthV/sinopia-cookbook
-
-### Puppet
-
-A Sinopia puppet module [is available at puppet forge](http://forge.puppetlabs.com/saheba/sinopia) source: https://github.com/saheba/puppet-sinopia
 
 ## Configuration
 
@@ -129,13 +119,3 @@ Misc stuff:
 No CouchDB here. This application is supposed to work with zero configuration, so filesystem is used as a storage.
 
 If you want to use a database instead, ask for it, we'll come up with some kind of a plugin system.
-
-## Similar existing things
-
-- npm + git (I mean, using git+ssh:// dependencies) - most people seem to use this, but it's a terrible idea... *npm update* doesn't work, can't use git subdirectories this way, etc.
-- [reggie](https://github.com/mbrevoort/node-reggie) - this looks very interesting indeed... I might borrow some code there.
-- [shadow-npm](https://github.com/dominictarr/shadow-npm), [public service](http://shadow-npm.net/) - it uses the same code as npmjs.org + service is dead
-- [gemfury](http://www.gemfury.com/l/npm-registry) and others - those are closed-source cloud services, and I'm not in a mood to trust my private code to somebody (security through obscurity yeah!)
-- npm-registry-proxy, npm-delegate, npm-proxy - those are just proxies...
-- Is there something else?
-
