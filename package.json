@@ -1,6 +1,6 @@
 {
   "name": "sino",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Private npm repository server",
   "main": "index.js",
   "bin": {
